@@ -1,0 +1,298 @@
+@font-face {
+  font-family: "ArticulatCF-Bold";
+  src: url("../fonts/ArticulatCF-Bold.eot");
+  src: url("../fonts/ArticulatCF-Bold.eot") format("embedded-opentype"), url("../fonts/ArticulatCF-Bold.woff2") format("woff2"), url("../fonts/ArticulatCF-Bold.woff") format("woff"), url("../fonts/ArticulatCF-Bold.ttf") format("truetype"), url("../fonts/ArticulatCF-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ArticulatCF-Demibold";
+  src: url("../fonts/ArticulatCF-Demibold.eot");
+  src: url("../fonts/ArticulatCF-Demibold.eot") format("embedded-opentype"), url("../fonts/ArticulatCF-Demibold.woff2") format("woff2"), url("../fonts/ArticulatCF-Demibold.woff") format("woff"), url("../fonts/ArticulatCF-Demibold.ttf") format("truetype"), url("../fonts/ArticulatCF-Demibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ArticulatCF-Medium";
+  src: url("../fonts/ArticulatCF-Medium.eot");
+  src: url("../fonts/ArticulatCF-Medium.eot") format("embedded-opentype"), url("../fonts/ArticulatCF-Medium.woff2") format("woff2"), url("../fonts/ArticulatCF-Medium.woff") format("woff"), url("../fonts/ArticulatCF-Medium.ttf") format("truetype"), url("../fonts/ArticulatCF-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ArticulatCF-Regular";
+  src: url("../fonts/ArticulatCF-Regular.eot");
+  src: url("../fonts/ArticulatCF-Regular.eot") format("embedded-opentype"), url("../fonts/ArticulatCF-Regular.woff2") format("woff2"), url("../fonts/ArticulatCF-Regular.woff") format("woff"), url("../fonts/ArticulatCF-Regular.ttf") format("truetype"), url("../fonts/ArticulatCF-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.dot {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.completed-status {
+  background-color: #0CB07E;
+  border: 6px solid #D3FFF2;
+}
+
+.inprogress-status {
+  background-color: #C69616;
+  border: 6px solid #F9EBC4;
+}
+
+.draft-status {
+  background-color: #3377D9;
+  border: 6px solid #DFECFF;
+}
+
+.cancelled-status {
+  background-color: #7A7A7A;
+  border: 6px solid #DADADA;
+}
+
+.failed-status {
+  background-color: #FF5757;
+  border: 6px solid #FFCED4;
+}
+.warning-status {
+  background-color: gold;
+  border: 6px solid rgb(253, 244, 196);
+}
+.yet-status {
+  background-color: greenyellow;
+  border : 6px solid rgb(239, 252, 218)
+}
+
+.pagination-button {
+  position: relative;
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #D0D0D0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 6px 15px;
+  margin-right: 6px;
+  border-radius: 10px;
+}
+
+.pagination-button-active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.pagintion-arrow-right {
+  rotate: 180deg;
+}
+
+.migration-table th:first-child {
+  border-top-left-radius: 6px;
+}
+
+th:last-child {
+  border-top-right-radius: 6px;
+}
+
+.migration-table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+.migration-table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+.migration-table th {
+  padding: 10px 20px !important;
+}
+
+.migration-table th {
+  background-color: #F6F6F6;
+  border-bottom: unset;
+  color: #525252;
+}
+
+.migration-table td {
+  padding: 22px 20px !important;
+  font-family: "ArticulatCF-Medium";
+  background: #ffffff;
+}
+
+.migration-table th, td {
+  font-size: 14px;
+  padding: 12px 20px !important;
+  white-space: nowrap;
+}
+
+.migration-table tr:last-child {
+  border-color: transparent;
+}
+
+.w-16 {
+  width: 16%;
+}
+
+.custom-filter-width {
+  width: 560px;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.custom-checkbox:checked {
+  background-color: #7BC587;
+  border: unset;
+  box-shadow: unset;
+}
+
+.wizard-footer-border {
+  border-top: 1px solid #D7D7D7;
+}
+
+.inventory-summary {
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.inventory-type {
+  font-family: "ArticulatCF-Demibold";
+  font-size: 16px;
+}
+
+.inventory-value {
+  font-family: "ArticulatCF-Demibold";
+  font-size: 24px;
+}
+
+.inventory-summary-v2 {
+  border: 1px solid #E6E6E6;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+
+.attachement-counts {
+  border-left: 1px solid #D7D7D7;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+
+.attachments-icons {
+  height: 16px;
+  width: 14px;
+  margin-right: 6px;
+  margin-bottom: 2px;
+}
+
+.custom-toggle {
+  height: 20px;
+  width: 40px !important;
+  margin-right: 5px !important;
+}
+
+.custom-toggle:checked {
+  background-color: #7BC587;
+  border: unset;
+  box-shadow: unset;
+}
+
+.date-type {
+  color: #AAAAAA;
+}
+
+.criteria-file-upload {
+  background-color: #000;
+}
+
+.upload-file {
+  background-color: #F3F5F7;
+  border: 1.5px dashed #E3E3E3;
+  padding: 16px 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.download-template {
+  color: #6745D9;
+}
+
+.border-left {
+  border-left: 1px solid #D7D7D7;
+  padding-left: 40px;
+  margin-left: 40px;
+}
+
+.stop-migration-btn {
+  background-color: #F15642;
+  color: #ffffff;
+  padding: 7px 18px;
+  border: 1.2px solid #F15642;
+  border-radius: 12px;
+  box-shadow: 1px 2px 4px 0px rgba(227, 21, 21, 0.2);
+}
+
+.status-badge {
+  padding: 6px 20px;
+  border-radius: 30px;
+}
+
+.inprogress-badge {
+  background: #F9EBC4;
+  color: #C69616;
+}
+
+.completed-badge{
+  background: #d2eccf;
+  color: #09ad25;
+}
+
+.failed-badge{
+  background: #eecebc;
+  color: #ee4c20;
+}
+
+.warning-badge{
+  background: #f0efc8;
+  color: #c6b608;
+}
+
+.cancelled-badge{
+  background: #aeaeaa;
+  color: #474743;
+}
+
+.custom-progress-bar {
+  height: 6px;
+}
+
+.progress-bar-color {
+  background-color: #0CB07E;
+  border-radius: 10px;
+  /* width: 15%; */
+}
+
+.progress-loader {
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.inventory-progress-loader {
+  background: repeating-linear-gradient(240deg, #f5f5f5, #f5f5f5 7px, #2fd151 5px, #2fd151 13px);
+  transition: width 0.5s ease-in-out;
+}/*# sourceMappingURL=landing-grid.css.map */

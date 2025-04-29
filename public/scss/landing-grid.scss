@@ -1,0 +1,218 @@
+@import './variable.scss';
+
+
+//Grid Style
+.dot {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .completed-status{
+    background-color: $completed-color;
+    border: 6px solid $completed-border-color;
+  }
+  .inprogress-status{
+    background-color: $inprogress-color;
+    border: 6px solid $inprogress-border-color;
+  }
+  .draft-status{
+    background-color: $draft-color;
+    border: 6px solid $draft-border-color;
+  }
+  .cancelled-status{
+    background-color: $cancelled-color;
+    border: 6px solid $cancelled-border-color;
+  }
+  .failed-status{
+    background-color: $failed-color;
+    border: 6px solid $failed-border-color;
+  }
+
+  .pagination-button{
+    position: relative;
+    display: block;
+    color: $primary-color;
+    text-decoration: none;
+    background-color: $white-color;
+    border: 1px solid $border-color;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 6px 15px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+.pagination-button-active{
+    background-color: $primary-color;
+    color: $white-color;
+}
+.pagintion-arrow-right{
+rotate: 180deg;
+}
+.migration-table th:first-child{
+    border-top-left-radius: 6px;
+}
+th:last-child{
+    border-top-right-radius: 6px;
+}
+.migration-table tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+}
+.migration-table tr:last-child td:last-child{
+    border-bottom-right-radius: 6px;
+}
+.migration-table th{
+    padding: 10px 20px !important;
+}
+.migration-table th{
+    background-color: $table-th-bg-color;
+    border-bottom: unset;
+    color: $table-th-text-color;
+
+}
+.migration-table td{
+    padding: 22px 20px !important;
+    font-family: $font-medium;
+    background: $white-color;
+}
+.migration-table th, td{
+    font-size: 14px;
+    padding: 12px 20px !important;
+    white-space: nowrap;
+}
+.migration-table tr:last-child{
+    border-color: transparent;
+}
+
+.w-16{
+    width: 16%;
+}
+
+.custom-filter-width{
+    width: 560px;
+}
+
+
+//Inventory Screen
+
+.custom-checkbox{
+    width: 18px;
+    height: 18px;
+}
+.custom-checkbox:checked{
+    background-color: $secondary-success-color;
+    border: unset;
+    box-shadow: unset;
+}
+
+.wizard-footer-border{
+    border-top: 1px solid $wizard-footer-border;
+}
+
+.inventory-summary{
+    border: 1px solid $inventory-list-border;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inventory-type{
+    font-family: $font-demibold;
+    font-size: 16px;
+}
+.inventory-value{
+    font-family: $font-demibold;
+    font-size: 24px;
+}
+.inventory-summary-v2{
+    border: 1px solid $inventory-list-border;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+}
+.attachement-counts{
+    border-left: 1px solid $wizard-footer-border;
+    padding-left:20px;
+    margin-left: 40px;
+}
+.attachments-icons{
+    height: 16px;
+    width: 14px;
+    margin-right: 6px;
+    margin-bottom: 2px;
+}
+
+.custom-toggle{
+    height: 20px;
+    width: 40px !important;
+    margin-right: 5px !important;
+}
+.custom-toggle:checked{
+    background-color: $secondary-success-color;
+    border: unset;
+    box-shadow: unset;
+}
+    
+.date-type{
+        color: #AAAAAA;
+}
+
+.criteria-file-upload{
+    background-color: $text-black;
+}
+.upload-file{
+    background-color: #F3F5F7;
+    border: 1.5px dashed #E3E3E3;;
+    padding: 16px 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+.opacity-0{
+    opacity: 0;
+}
+.download-template{
+    color: $purple-color;
+}
+.border-left{
+    border-left: 1px solid $wizard-footer-border;
+    padding-left: 40px;
+    margin-left: 40px;
+}
+
+.stop-migration-btn{
+    background-color: $warning-color;
+    color: $white-color;
+    padding: 7px 18px;
+    border: 1.2px solid $warning-color;
+    border-radius: 12px;
+    box-shadow: 1px 2px 4px 0px rgba(227, 21, 21, 0.2);
+}
+
+.status-badge{
+    padding: 6px 20px;
+    border-radius: 30px;
+}
+.inprogress-badge{
+    background: $inprogress-border-color;
+    color: $inprogress-color;
+}
+.custom-progress-bar{
+    height: 6px;
+}
+.progress-bar-color{
+    background-color: $completed-color;
+    border-radius: 10px;
+}
+
+
+
+
+.progress-loader {
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inventory-progress-loader {
+    background:repeating-linear-gradient(240deg, #f5f5f5, #f5f5f5 7px, #2fd151 5px, #2fd151 13px);
+    transition: width 0.5s ease-in-out;
+}
