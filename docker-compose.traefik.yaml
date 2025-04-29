@@ -1,0 +1,20 @@
+
+
+services:
+  traefik:
+    image: traefik:v2.9
+    command:
+      - "--api.insecure=true"  # Enable the dashboard (not for production)
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"  # Public port for HTTP traffic
+      - "8080:8080"  # Dashboard port
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"  # Allow Traefik to access Docker
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    driver: bridge

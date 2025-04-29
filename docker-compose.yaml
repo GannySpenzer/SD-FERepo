@@ -1,0 +1,38 @@
+
+
+services:
+  blue-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.blue.rule=PathPrefix(`/`)"
+      - "traefik.http.services.blue.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.retry.retry.attempts=5"
+      - "traefik.http.middlewares.retry.retry.initialinterval=200ms"
+      - "traefik.http.services.blue.loadbalancer.healthCheck.path=/health"
+      - "traefik.http.services.blue.loadbalancer.healthCheck.interval=10s"
+      - "traefik.http.services.blue.loadbalancer.healthCheck.timeout=1s"
+    networks:
+      - traefik
+
+  green-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.green.rule=PathPrefix(`/`)"
+      - "traefik.http.services.green.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.retry.retry.attempts=5"
+      - "traefik.http.middlewares.retry.retry.initialinterval=200ms"
+      - "traefik.http.services.green.loadbalancer.healthCheck.path=/health"
+      - "traefik.http.services.green.loadbalancer.healthCheck.interval=10s"
+      - "traefik.http.services.green.loadbalancer.healthCheck.timeout=1s"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
